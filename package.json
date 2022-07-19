@@ -20,7 +20,8 @@
   "homepage": "https://github.com/Bin-Ostrowski/u-develop-it#readme",
   "dependencies": {
     "express": "^4.18.1",
-    "mysql2": "^2.3.3"
+    "mysql2": "^2.3.3",
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "jest": "^28.1.3"

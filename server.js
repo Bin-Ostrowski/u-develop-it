@@ -1,6 +1,6 @@
 const mysql = require('mysql2');
 const express = require('express');
-const { binaryExpression } = require('@babel/types');
+const path = require('path');
 const PORT = process.env.PORT || 3001;
 const app = express();
 const inputCheck = require('./utils/inputCheck');
