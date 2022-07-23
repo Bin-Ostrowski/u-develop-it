@@ -4,6 +4,7 @@ const router = express.Router();
 const db = require('../../db/connection');
 const inputCheck = require('../../utils/inputCheck');
 
+// Post (add) votes to votes table
 router.post('/vote', ({ body }, res) => {
     // Data validation
     const errors = inputCheck(body, 'voter_id', 'candidate_id');
@@ -28,6 +29,8 @@ router.post('/vote', ({ body }, res) => {
     });
 });
 
+
+// GET all votes shown in table ti candidates and party_id
 router.get('/votes', (req, res) => {
     
     const sql = `SELECT candidates.*, parties.name AS party_name, COUNT(candidate_id) AS count
